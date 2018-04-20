@@ -44,6 +44,7 @@ func (server *FtpServer) newClientHandler(connection net.Conn, id uint32) *clien
 		reader:      bufio.NewReader(connection),
 		connectedAt: time.Now().UTC(),
 		path:        "/",
+		transferTLS: false,
 		logger:      log.With(server.Logger, "clientId", id),
 	}
 

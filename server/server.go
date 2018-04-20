@@ -34,11 +34,6 @@ func init() {
 	commandsMap["USER"] = &CommandDescription{Fn: (*clientHandler).handleUSER, Open: true}
 	commandsMap["PASS"] = &CommandDescription{Fn: (*clientHandler).handlePASS, Open: true}
 
-	// TLS handling
-	commandsMap["AUTH"] = &CommandDescription{Fn: (*clientHandler).handleAUTH, Open: true}
-	commandsMap["PROT"] = &CommandDescription{Fn: (*clientHandler).handlePROT, Open: true}
-	commandsMap["PBSZ"] = &CommandDescription{Fn: (*clientHandler).handlePBSZ, Open: true}
-
 	// Misc
 	commandsMap["FEAT"] = &CommandDescription{Fn: (*clientHandler).handleFEAT, Open: true}
 	commandsMap["SYST"] = &CommandDescription{Fn: (*clientHandler).handleSYST, Open: true}
